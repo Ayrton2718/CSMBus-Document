@@ -1,7 +1,7 @@
 # CSMBusのプロトコル
 CSMBusのライブラリは、図のように単一のPCから、複数の`Gateway`基盤（Ethernet to CAN）が接続し、その`Gateway`基盤に複数のCANデバイスが接続することを想定している。`ROS`-`Gateway`間の通信をライブラリで隠蔽することで、ユーザがPC-CANデバイス間の通信をEthernetの通信プログラムを書かずに直接行えるようになっている。
 
-![overview](connection_example.drawio.svg)
+![overview](export_svg/connection_example.svg)
 
 
 ## プロトコルスタック
@@ -22,7 +22,7 @@ ROS2ノードは、`robomas`, `odrive`, `encoder`, `gyro`などをインスタ�
 
 - `ether csmbus backdoor`: `Gateway`基盤のエラーや、ROS2を起動するためのパネル基盤のデータなどは、ROS2との通信ポートとは別のポートを用いて取得することができる。
 
-![overview](csmbus_ros2_stack.drawio.svg)
+![overview](export_svg/csmbus_ros2_stack.svg)
 
 
 ### Gateway
@@ -39,15 +39,14 @@ ROS2ノードは、`robomas`, `odrive`, `encoder`, `gyro`などをインスタ�
 
 - `ether csmbus backdoor`: `Gateway`基盤内で発生したエラーやパネル基盤の情報など、ROSが起動していない間もPC側が必要なデータを送信する。
 
-![overview](csmbus_gateway_stack.drawio.svg)
+![overview](export_svg/csmbus_gateway_stack.svg)
 
 
 ### CAN Device
 CANの小基板上で動作するcsmbusのプロトコルスタックを解説する（[CANパケットの詳細](#can-csmbus-packet)）。  
 - `can csmbus io`: 受け取るCAN IDの識別、自分のCAN IDの送信をを行う。Gatewayから定期的に送られてくるセーフティ信号の監視も行っており、エラーやタイムアウトが発生したら、`user task`の`unsafe`関数を実行する。詳細は[「ROS2-CAN小基盤上で動作するカスタムタスク作成方法」](custom_task.md)。
 
-
-![overview](csmbus_device_stack.drawio.svg)
+![overview](export_svg/csmbus_device_stack.svg)
 
 
 ## 通信パケット
