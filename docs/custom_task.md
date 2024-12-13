@@ -185,9 +185,9 @@ private:
 ```
 
 #### CAN小基盤
-参考:https://github.com/tutrobo/ABU2024_DriverG431/blob/dev-SWITCH/Core/Src/user_task.cpp
+参考:https://github.com/Ayrton2718/ABU2024_DriverG431/blob/dev-SWITCH/Core/Src/user_task.cpp
 
-参考:https://github.com/tutrobo/ABU2024_DriverG431/blob/dev-WS2812/Core/Src/user_task.cpp
+参考:https://github.com/Ayrton2718/ABU2024_DriverG431/blob/dev-WS2812/Core/Src/user_task.cpp
 
 ## その他
 ### 基盤のID管理
