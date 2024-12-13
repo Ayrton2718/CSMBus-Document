@@ -26,7 +26,7 @@ CSMBusのプロトコルやライブラリの使用方法についてまとめ�
   The circuit design used in this project is based on their innovative work.
 
 - **[eyr1n](https://github.com/eyr1n)**, [TUT_RC]  
-  The creator of the **tutrc_ament** library.
+  The creator of the **[tutrc_ament](https://github.com/tutrobo/ABU2023_tutrc_ament)** library.
 
 - **[Syunima](https://github.com/Syunima)**, [NIT_OITA]  
   For inspiring the concept behind the circuit design in this project. 
